@@ -1,0 +1,125 @@
+body{
+    margin: 0;
+    font-family: Inter,sans-serif;
+    font-size: 32px;
+}
+.container{
+    position: relative;
+    height: 100vh;
+     background: url(./images/pattern-curve.svg) no-repeat bottom left;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card .btn{
+    position: absolute;
+    top: 525px;
+    left: 600px;
+    z-index: 4;
+    
+    background: rgb(255, 255, 255);
+    color:hsl(240, 18%, 77%);
+    border-radius: 50px;
+}
+.card .btn i{
+    margin: 0px 20px;
+}
+.card .btn i:hover{
+    opacity: .3;
+    
+}
+.card {
+    position: relative;
+    width: 1000px;
+    height: 700px;
+}
+.profile{
+    position: absolute;
+    display: flex;
+    align-items:center;
+    overflow: hidden;
+    flex-direction: row;
+    width: 1000px;
+    height: 700px;
+    
+}
+.profile1{
+    z-index: 2;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+.profile2{
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+.text{
+    margin-left: 50px;
+    width: 60%;
+    z-index: 3;
+    background: url(./images/pattern-quotes.svg) no-repeat;
+    
+    background-position-x: 100px;
+}
+.profile .img{
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white url(./images/pattern-bg.svg) no-repeat center;
+    background-size: contain;
+}
+.profile .img img{
+    width: 80%;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.226);
+    
+}
+.pa2{
+    font-size: 20px;
+    color: hsl(240, 18%, 77%);
+}
+.pa2 strong{color: black;}
+
+@media (max-width:500px)
+{
+    body{
+        text-align: center;
+    }
+    .container{
+        position: static;
+        height: auto;
+    }
+    .card{position: relative;
+        width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction:column ;
+    
+    }
+    .profile{
+        flex-direction: column-reverse;
+        position: absolute;
+        width: 100%;
+        height: auto;
+    }
+    .text{
+        width: 90%;
+        margin: 0;
+        height: auto;
+    }
+    .profile .img{
+        position: static;
+    }
+    .card .btn{position: absolute;top:440px; left: 33%;
+        width: 30%;
+    }
+    .attribution{
+        margin-top: 1000px;
+    }
+}
